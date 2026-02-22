@@ -1,278 +1,755 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Otieno Edwin William | Finance Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-
-<style>
-
-/* GLOBAL */
-
-body{
-margin:0;
-font-family:Poppins,sans-serif;
-scroll-behavior:smooth;
-}
-
-/* NAVIGATION */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#0f172a;
-padding:15px;
-display:flex;
-justify-content:center;
-gap:30px;
-z-index:1000;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* FLOATING LINKEDIN BUTTON */
-
-.linkedin-btn{
-position:fixed;
-top:150px;
-right:20px;
-background:#0077b5;
-padding:12px;
-border-radius:50%;
-}
-
-.linkedin-btn a{
-color:white;
-text-decoration:none;
-}
-
-/* PAGE SECTIONS */
-
-section{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:80px;
-}
-
-/* INTRO PAGE */
-
-#intro{
-background:linear-gradient(135deg,#020617,#0f172a);
-color:white;
-font-family:Montserrat,sans-serif;
-}
-
-/* EDUCATION PAGE */
-
-#education{
-background:linear-gradient(135deg,#0f172a,#1e3a8a);
-color:white;
-}
-
-/* ABOUT PAGE */
-
-#about{
-background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
-color:white;
-}
-
-/* PROJECTS PAGE */
-
-#projects{
-background:linear-gradient(135deg,#0ea5e9,#0f172a);
-color:white;
-}
-
-/* SKILLS PAGE */
-
-#skills{
-background:linear-gradient(135deg,#020617,#1e40af);
-color:white;
-}
-
-/* CONTACT PAGE */
-
-#contact{
-background:linear-gradient(135deg,#111827,#0284c7);
-color:white;
-}
-
-/* CARD DESIGN */
-
-.card{
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:15px;
-max-width:800px;
-margin-top:25px;
-backdrop-filter:blur(10px);
-}
-
-/* FORM */
-
-input,textarea{
-width:100%;
-padding:12px;
-margin-top:12px;
-border-radius:8px;
-border:none;
-}
-
-button{
-margin-top:15px;
-padding:12px 25px;
-background:#38bdf8;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
-
-/* PROFILE IMAGE */
-
-.profile{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-box-shadow:0 0 40px rgba(56,189,248,0.6);
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Otieno Edwin William - Finance & Accounting Professional | CPA Candidate">
+    <title>Otieno Edwin William | Finance & Accounting</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --dark: #0f172a;
+            --accent: #38bdf8;
+            --text: #f1f5f9;
+            --card-bg: rgba(255, 255, 255, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a.active {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s;
+        }
+        
+        /* HERO / INTRO */
+        #intro {
+            min-height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)),
+                        url('https://picsum.photos/id/1018/1920/1080') center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 1100px;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4rem;
+            z-index: 2;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(3rem, 7vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-text .highlight {
+            color: var(--primary);
+        }
+        
+        .hero-text h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0284c7;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .profile-container {
+            flex-shrink: 0;
+        }
+        
+        .profile {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid rgba(14, 165, 233, 0.4);
+            box-shadow: 0 0 60px rgba(56, 189, 248, 0.5);
+            transition: transform 0.4s ease;
+        }
+        
+        .profile:hover {
+            transform: scale(1.05);
+        }
+        
+        /* ALL SECTIONS */
+        section {
+            padding: 100px 5%;
+            position: relative;
+        }
+        
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85));
+            z-index: 1;
+        }
+        
+        .section-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        /* CARD */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: rgba(14, 165, 233, 0.3);
+        }
+        
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 31px;
+            width: 20px;
+            height: 20px;
+            background: var(--dark);
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            margin-left: 90px;
+            background: var(--card-bg);
+            padding: 1.8rem 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+        }
+        
+        .timeline-content .date {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* PROJECTS GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+        }
+        
+        .project-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .skill-item:hover {
+            background: rgba(14, 165, 233, 0.15);
+            transform: scale(1.03);
+        }
+        
+        .skill-item i {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* CONTACT FORM */
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        input, textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+        }
+        
+        button {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #0284c7;
+            transform: translateY(-2px);
+        }
+        
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--dark);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: left 0.4s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-content {
+                margin-left: 70px;
+            }
+        }
+        
+        /* SCROLL ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-
 <body>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#" class="logo">OEW</a>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#intro" class="active">Home</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-<nav>
-<a href="#intro">Introduction</a>
-<a href="#education">Education & Experience</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</nav>
+    <!-- FLOATING LINKEDIN -->
+    <a href="https://www.linkedin.com/in/otieno-william" target="_blank" 
+       style="position:fixed; top:120px; right:30px; background:#0077b5; width:55px; height:55px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.6rem; box-shadow:0 10px 30px rgba(0,119,181,0.4); z-index:999; transition:0.3s;">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
 
-<!-- LinkedIn Floating Button -->
-<div class="linkedin-btn">
-<a href="https://www.linkedin.com/in/otieno-william" target="_blank">in</a>
-</div>
+    <!-- INTRODUCTION -->
+    <section id="intro">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>OTIENO EDWIN <span class="highlight">WILLIAM</span></h1>
+                <h3>Finance &amp; Accounting Professional | CPA Candidate</h3>
+                <p style="max-width:520px; margin:0 auto 2.5rem; opacity:0.9; font-size:1.15rem;">
+                    Proactive finance expert with 2+ years delivering accurate reporting, audit excellence, 
+                    and operational efficiency in dynamic environments.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="#" onclick="alert('Resume download link would go here (add your PDF URL)')" class="btn btn-outline">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            
+            <div class="profile-container">
+                <img src="assets/images/profile.jpg" alt="Otieno Edwin William" class="profile">
+            </div>
+        </div>
+        
+        <!-- Quick contact strip -->
+        <div style="position:absolute; bottom:40px; left:50%; transform:translateX(-50%); background:rgba(15,23,42,0.7); padding:12px 30px; border-radius:50px; backdrop-filter:blur(10px); display:flex; gap:30px; font-size:0.95rem; z-index:10;">
+            <div><i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:8px;"></i> Nairobi, Kenya</div>
+            <div><i class="fas fa-phone" style="color:var(--primary); margin-right:8px;"></i> 0708 081 210</div>
+            <div><i class="fas fa-envelope" style="color:var(--primary); margin-right:8px;"></i> Otienowilliam86@gmail.com</div>
+        </div>
+    </section>
 
-<!-- INTRODUCTION PAGE -->
+    <!-- JOURNEY (Education + Experience) -->
+    <section id="journey" style="background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)), url('https://picsum.photos/id/133/1920/1080') center/cover fixed;">
+        <div class="section-content">
+            <h2 class="section-title">Education &amp; Professional Journey</h2>
+            
+            <div class="timeline">
+                <!-- Education -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in Finance</h3>
+                        <p class="date">2022 • Cooperative University of Kenya</p>
+                        <p>Strong foundation in financial management, accounting principles, and economic analysis.</p>
+                    </div>
+                </div>
+                
+                <!-- Experience 1 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Assistant Accountant</h3>
+                        <p class="date">2025 – Present • Tedkraft Medical Supplies</p>
+                        <p>Full-cycle accounting, financial reporting, and operational support in a fast-paced medical supply environment.</p>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Finance Intern</h3>
+                        <p class="date">2023 – 2024 • Kenya Revenue Authority</p>
+                        <p>Tax compliance, audit support, and process optimization within Kenya’s premier revenue agency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="intro">
+    <!-- ABOUT -->
+    <section id="about" style="background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)), url('https://picsum.photos/id/201/1920/1080') center/cover fixed;">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="card" style="max-width:820px; margin:0 auto;">
+                <p style="font-size:1.15rem; text-align:center;">
+                    Proactive and detail-oriented Finance &amp; Accounting professional with over two years of hands-on experience 
+                    in accounts payable, bank reconciliations, audit support, budgeting, and financial reporting. 
+                    Currently pursuing CPA Part III. Passionate about leveraging ERP systems and data analytics 
+                    to drive accuracy, efficiency, and strategic decision-making.
+                </p>
+            </div>
+        </div>
+    </section>
 
-<img src="assets/images/profile.jpg" class="profile">
+    <!-- ACHIEVEMENTS / PROJECTS -->
+    <section id="achievements" style="background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)), url('https://picsum.photos/id/251/1920/1080') center/cover fixed;">
+        <div class="section-content">
+            <h2 class="section-title">Key Achievements &amp; Contributions</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card card">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Invoice Processing</h3>
+                    <p>Successfully processed and verified 500+ supplier invoices monthly with 100% accuracy.</p>
+                </div>
+                <div class="project-card card">
+                    <i class="fas fa-search"></i>
+                    <h3>Document Retrieval</h3>
+                    <p>Improved retrieval efficiency by 40% through systematic filing and digital archiving.</p>
+                </div>
+                <div class="project-card card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Month-End Close</h3>
+                    <p>Reduced financial close cycle by 15% via process automation and checklist optimization.</p>
+                </div>
+                <div class="project-card card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Audit Support</h3>
+                    <p>Supported 100+ audit verifications and successfully cleared all external reviews.</p>
+                </div>
+                <div class="project-card card">
+                    <i class="fas fa-database"></i>
+                    <h3>ERP Migration</h3>
+                    <p>Provided key support during ERP system migration and data validation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h1>OTIENO EDWIN WILLIAM</h1>
+    <!-- SKILLS -->
+    <section id="skills" style="background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)), url('https://picsum.photos/id/180/1920/1080') center/cover fixed;">
+        <div class="section-content">
+            <h2 class="section-title">Core Skills &amp; Competencies</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-item card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Financial Reporting</h4>
+                </div>
+                <div class="skill-item card">
+                    <i class="fas fa-file-excel"></i>
+                    <h4>Advanced Excel &amp; Power BI</h4>
+                </div>
+                <div class="skill-item card">
+                    <i class="fas fa-landmark"></i>
+                    <h4>Tax Compliance &amp; KRA</h4>
+                </div>
+                <div class="skill-item card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Risk Management</h4>
+                </div>
+                <div class="skill-item card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>ERP Systems (SAP, QuickBooks)</h4>
+                </div>
+                <div class="skill-item card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Stakeholder Negotiation</h4>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3>Finance & Accounting Professional | CPA Candidate</h3>
+    <!-- CONTACT -->
+    <section id="contact" style="background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)), url('https://picsum.photos/id/160/1920/1080') center/cover fixed;">
+        <div class="section-content">
+            <h2 class="section-title">Let’s Connect</h2>
+            
+            <div class="card contact-form">
+                <form action="mailto:Otienowilliam86@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            
+            <p style="text-align:center; margin-top:2.5rem; opacity:0.8;">
+                Or reach me directly on <a href="https://www.linkedin.com/in/otieno-william" target="_blank" style="color:var(--primary);">LinkedIn</a>
+            </p>
+        </div>
+    </section>
 
-<div class="card">
-📍 Nairobi-Kenya <br>
-📞 0708081210 <br>
-📧 Otienowilliam86@gmail.com <br><br>
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Otieno Edwin William. Built with passion for finance excellence.
+    </footer>
 
-Proactive finance professional specializing in financial reporting,
-audit support, ERP systems, tax compliance, and accounting operations.
-</div>
-
-</section>
-
-<!-- EDUCATION AND EXPERIENCE -->
-
-<section id="education">
-
-<h2>Education & Experience</h2>
-
-<div class="card">
-
-Bachelor of Science in Finance — Cooperative University of Kenya (2022)<br><br>
-
-Assistant Accountant – Tedkraft Medical Supplies (2025 – Present)<br>
-Finance Intern – Kenya Revenue Authority (2023 – 2024)
-
-</div>
-
-</section>
-
-<!-- ABOUT PAGE -->
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<div class="card">
-
-Proactive and detail-oriented Finance and Accounting professional with over 2 years of experience in accounts payable, bank reconciliation, audit support, budgeting, and financial reporting. Currently pursuing CPA Part III.
-
-</div>
-
-</section>
-
-<!-- PROJECTS PAGE -->
-
-<section id="projects">
-
-<h2>Projects & Contributions</h2>
-
-<div class="card">
-
-✔ Processed 500+ invoices<br>
-✔ Improved retrieval efficiency by 40%<br>
-✔ Reduced close cycle by 15%<br>
-✔ Supported 100+ audit verifications<br>
-✔ ERP Migration Support
-
-</div>
-
-</section>
-
-<!-- SKILLS PAGE -->
-
-<section id="skills">
-
-<h2>Skills & Achievements</h2>
-
-<div class="card">
-
-Financial Reporting | Advanced Excel | Tax Compliance<br>
-Risk Management | ERP Systems | P&L Management<br>
-Audit Support | Stakeholder Negotiation
-
-</div>
-
-</section>
-
-<!-- CONTACT PAGE -->
-
-<section id="contact">
-
-<h2>Contact Me Directly</h2>
-
-<div class="card">
-
-<form action="mailto:Otienowilliam86@gmail.com" method="post" enctype="text/plain">
-
-<input placeholder="Your Name" required>
-<input placeholder="Your Email" required>
-<textarea placeholder="Your Message"></textarea>
-
-<button>Send Message</button>
-
-</form>
-
-</div>
-
-</section>
-
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Animate hamburger
+            const spans = hamburger.querySelectorAll('span');
+            if (navLinks.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                    const spans = hamburger.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        });
+        
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+        
+        // Keyboard accessibility for nav
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
+                e.preventDefault();
+                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
 </body>
 </html>
