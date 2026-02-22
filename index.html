@@ -2,131 +2,149 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Otieno Edwin William | Finance Professional</title>
+<title>Otieno Edwin William | Finance Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
 <style>
+
+/* GLOBAL */
 
 body{
 margin:0;
 font-family:Poppins,sans-serif;
-background:#0f172a;
-color:white;
-overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
-/* Animated Finance Numbers Background */
-
-body::before{
-content:"KES 1,250,000   15% ROI   95% Compliance   500+ Invoices   IFRS   CPA   30% Efficiency Gain";
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-font-size:60px;
-color:rgba(255,255,255,0.03);
-white-space:nowrap;
-animation:move 20s linear infinite;
-z-index:-1;
-}
-
-@keyframes move{
-0%{transform:translate(-50%,-50%) translateX(-50%);}
-100%{transform:translate(-50%,-50%) translateX(50%);}
-}
-
-/* Top Contact Bar */
-
-.topbar{
-background:#1e293b;
-padding:10px;
-text-align:center;
-font-size:14px;
-}
-
-/* Navbar */
+/* NAVIGATION */
 
 nav{
-display:flex;
-justify-content:space-between;
-padding:20px 60px;
+position:fixed;
+top:0;
+width:100%;
 background:#0f172a;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+z-index:1000;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+font-weight:bold;
 }
 
-nav a:hover{
-color:#38bdf8;
-}
+/* FLOATING LINKEDIN BUTTON */
 
-/* Hero */
-
-.hero{
-padding:120px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.hero h1{
-font-size:3rem;
-}
-
-.hero span{
-color:#38bdf8;
-}
-
-.profile{
-width:280px;
-height:280px;
+.linkedin-btn{
+position:fixed;
+top:150px;
+right:20px;
+background:#0077b5;
+padding:12px;
 border-radius:50%;
-object-fit:cover;
-box-shadow:0 0 40px rgba(56,189,248,0.6);
 }
 
-/* Section */
+.linkedin-btn a{
+color:white;
+text-decoration:none;
+}
+
+/* PAGE SECTIONS */
 
 section{
-padding:80px 60px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:80px;
 }
+
+/* INTRO PAGE */
+
+#intro{
+background:linear-gradient(135deg,#020617,#0f172a);
+color:white;
+font-family:Montserrat,sans-serif;
+}
+
+/* EDUCATION PAGE */
+
+#education{
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:white;
+}
+
+/* ABOUT PAGE */
+
+#about{
+background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
+color:white;
+}
+
+/* PROJECTS PAGE */
+
+#projects{
+background:linear-gradient(135deg,#0ea5e9,#0f172a);
+color:white;
+}
+
+/* SKILLS PAGE */
+
+#skills{
+background:linear-gradient(135deg,#020617,#1e40af);
+color:white;
+}
+
+/* CONTACT PAGE */
+
+#contact{
+background:linear-gradient(135deg,#111827,#0284c7);
+color:white;
+}
+
+/* CARD DESIGN */
 
 .card{
-background:#1e293b;
-padding:25px;
-border-radius:12px;
-margin-top:20px;
-transition:0.4s;
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:15px;
+max-width:800px;
+margin-top:25px;
+backdrop-filter:blur(10px);
 }
 
-.card:hover{
-transform:translateY(-8px);
+/* FORM */
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:12px;
+border-radius:8px;
+border:none;
 }
 
 button{
+margin-top:15px;
 padding:12px 25px;
+background:#38bdf8;
 border:none;
 border-radius:8px;
-background:#38bdf8;
-color:black;
-font-weight:bold;
 cursor:pointer;
 }
 
-button:hover{
-background:#0ea5e9;
-}
+/* PROFILE IMAGE */
 
-footer{
-text-align:center;
-padding:30px;
-background:black;
-margin-top:50px;
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 0 40px rgba(56,189,248,0.6);
 }
 
 </style>
@@ -134,51 +152,127 @@ margin-top:50px;
 
 <body>
 
-<div class="topbar">
-📍 Nairobi, Kenya | 📞 0708081210 | 📧 Otienowilliam86@gmail.com
-</div>
-
 <nav>
-<div><strong>Otieno.</strong></div>
-<div>
-<a href="index.html">Home</a>
-<a href="cv.html">Download CV</a>
-<a href="contact.html">Contact</a>
-</div>
+<a href="#intro">Introduction</a>
+<a href="#education">Education & Experience</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">
-<div>
-<h1>OTIENO <span>EDWIN WILLIAM</span></h1>
-<h3>Finance & Accounting Professional | CPA Part III</h3>
-
-<p>
-Proactive finance professional with over 2 years experience in financial reporting,
-audit support, ERP systems, and compliance under IFRS and Kenyan tax regulations.
-</p>
-
-<a href="cv.html"><button>Download CV</button></a>
+<!-- LinkedIn Floating Button -->
+<div class="linkedin-btn">
+<a href="https://www.linkedin.com/in/otieno-william" target="_blank">in</a>
 </div>
+
+<!-- INTRODUCTION PAGE -->
+
+<section id="intro">
 
 <img src="assets/images/profile.jpg" class="profile">
-</div>
 
-<section>
-<h2>Professional Highlights</h2>
+<h1>OTIENO EDWIN WILLIAM</h1>
+
+<h3>Finance & Accounting Professional | CPA Candidate</h3>
 
 <div class="card">
-✔ 500+ invoices processed<br>
-✔ 95% audit compliance rate<br>
-✔ 15% faster month-end close<br>
-✔ 40% improvement in document retrieval<br>
-✔ ERP Systems: QuickBooks & Zoho Books
+📍 Nairobi-Kenya <br>
+📞 0708081210 <br>
+📧 Otienowilliam86@gmail.com <br><br>
+
+Proactive finance professional specializing in financial reporting,
+audit support, ERP systems, tax compliance, and accounting operations.
 </div>
 
 </section>
 
-<footer>
-© 2025 Otieno Edwin William
-</footer>
+<!-- EDUCATION AND EXPERIENCE -->
+
+<section id="education">
+
+<h2>Education & Experience</h2>
+
+<div class="card">
+
+Bachelor of Science in Finance — Cooperative University of Kenya (2022)<br><br>
+
+Assistant Accountant – Tedkraft Medical Supplies (2025 – Present)<br>
+Finance Intern – Kenya Revenue Authority (2023 – 2024)
+
+</div>
+
+</section>
+
+<!-- ABOUT PAGE -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="card">
+
+Proactive and detail-oriented Finance and Accounting professional with over 2 years of experience in accounts payable, bank reconciliation, audit support, budgeting, and financial reporting. Currently pursuing CPA Part III.
+
+</div>
+
+</section>
+
+<!-- PROJECTS PAGE -->
+
+<section id="projects">
+
+<h2>Projects & Contributions</h2>
+
+<div class="card">
+
+✔ Processed 500+ invoices<br>
+✔ Improved retrieval efficiency by 40%<br>
+✔ Reduced close cycle by 15%<br>
+✔ Supported 100+ audit verifications<br>
+✔ ERP Migration Support
+
+</div>
+
+</section>
+
+<!-- SKILLS PAGE -->
+
+<section id="skills">
+
+<h2>Skills & Achievements</h2>
+
+<div class="card">
+
+Financial Reporting | Advanced Excel | Tax Compliance<br>
+Risk Management | ERP Systems | P&L Management<br>
+Audit Support | Stakeholder Negotiation
+
+</div>
+
+</section>
+
+<!-- CONTACT PAGE -->
+
+<section id="contact">
+
+<h2>Contact Me Directly</h2>
+
+<div class="card">
+
+<form action="mailto:Otienowilliam86@gmail.com" method="post" enctype="text/plain">
+
+<input placeholder="Your Name" required>
+<input placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</div>
+
+</section>
 
 </body>
 </html>
